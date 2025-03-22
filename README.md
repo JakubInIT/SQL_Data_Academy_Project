@@ -1,7 +1,7 @@
-# Demo_project_from_SQL
-This is demo project from SQL
+# Project_from_SQL
+This is my project from SQL
 ---
-Ahoj lidi toto je muj projekt. Ten ma takovou strukturu:
+Project structure:
 - SQL project.sql
 - soubor 2
 - soubor 3
