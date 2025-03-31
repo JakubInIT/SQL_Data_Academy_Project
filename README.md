@@ -1,12 +1,11 @@
 # Project from SQL
-
-Projekt z ENGETO datové akademie k získání certifikátu.
-
 ---
 
+Projekt z ENGETO datové akademie k získání certifikátu.
 Discord name: JakubInIT.
 
 ---
+
 ## Zadání:
 
 ### Úvod do projektu:
@@ -31,11 +30,11 @@ countries - Všemožné informace o zemích na světě, například hlavní mě
 economies - HDP, GINI, daňová zátěž, atd. pro daný stát a rok.
 
 ### Výzkumné otázky:
-- Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
-- Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
-- Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
-- Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
-- Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
+1) Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
+2) Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
+3) Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
+4) Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
+5) Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 
 ### Výstupy z projektu:
 Pomozte kolegům s daným úkolem. Výstupem by měly být dvě tabulky v databázi, ze kterých se požadovaná data dají získat. Tabulky pojmenujte t_{jmeno}_{prijmeni}_project_SQL_primary_final (pro data mezd a cen potravin za Českou republiku sjednocených na totožné porovnatelné období – společné roky) a t_{jmeno}_{prijmeni}_project_SQL_secondary_final (pro dodatečná data o dalších evropských státech).
@@ -46,13 +45,13 @@ Neupravujte data v primárních tabulkách! Pokud bude potřeba transformovat ho
 ---
 
 ## Struktura projektu:
-- Tabulka cen potravin a mezd pro jednotlivá odvětví
-- Tabulka s dodatečnými daty evropských států.
-- SQL dotaz na první otázku.
-- SQL dotaz na druhou otázku.
-- SQL dotaz na třetí otázku.
-- SQL dotaz na čtvrtou otázku.
-- SQL dotaz na pátou otázku.
+- Tabulka cen potravin a mezd pro jednotlivá odvětví - t_jakub_taclik_project_SQL_primary_final
+- Tabulka s dodatečnými daty evropských států - t_jakub_taclik_project_SQL_secondary_final
+- SQL dotaz na první otázku - SQL_first_task
+- SQL dotaz na druhou otázku - SQL_second_task
+- SQL dotaz na třetí otázku - SQL_third_task
+- SQL dotaz na čtvrtou otázku - SQL_fourth_task
+- SQL dotaz na pátou otázku - SQL_fifth_task
 
 ---
 
