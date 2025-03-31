@@ -1,10 +1,7 @@
 # Project from SQL
----
 
 Projekt z ENGETO datové akademie k získání certifikátu.
 Discord name: JakubInIT.
-
----
 
 ## Zadání:
 
@@ -42,8 +39,6 @@ Dále připravte sadu SQL, které z vámi připravených tabulek získají datov
 Na svém GitHub účtu vytvořte veřejný repozitář, kam uložíte všechny informace k projektu – hlavně SQL skript generující výslednou tabulku, popis mezivýsledků (průvodní listinu) a informace o výstupních datech (například kde chybí hodnoty apod.).
 Neupravujte data v primárních tabulkách! Pokud bude potřeba transformovat hodnoty, dělejte tak až v tabulkách nebo pohledech, které si nově vytváříte.
 
----
-
 ## Struktura projektu:
 - Tabulka cen potravin a mezd pro jednotlivá odvětví - t_jakub_taclik_project_SQL_primary_final
 - Tabulka s dodatečnými daty evropských států - t_jakub_taclik_project_SQL_secondary_final
@@ -52,8 +47,6 @@ Neupravujte data v primárních tabulkách! Pokud bude potřeba transformovat ho
 - SQL dotaz na třetí otázku - SQL_third_task
 - SQL dotaz na čtvrtou otázku - SQL_fourth_task
 - SQL dotaz na pátou otázku - SQL_fifth_task
-
----
 
 ## Vysledky
 
