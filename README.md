@@ -48,18 +48,36 @@ Neupravujte data v primárních tabulkách! Pokud bude potřeba transformovat ho
 - SQL dotaz na čtvrtou otázku - SQL_fourth_task
 - SQL dotaz na pátou otázku - SQL_fifth_task
 
-## Vysledky
+## Postup:
+### Vytvoření tabulky cen potravin a mezd pro jednotlivá odvětví:
+Nejdříve je potřeba pomocí funkce LEFT JOIN spojit tabulku czechia_price přes sloupec category_code s tabulkou czechia_price_category přes sloupec code, kterou si nazvu prices. Spojením těchto dvou tabulek získám především data o názvu a kódu potravin a jejich cen za dané období.
+Poté je potřeba pomocí funkce LEFT JOIN spojit tabulku czechia_payroll přes sloupec industry_branch_code s tabulkou czechia_payroll_industry_branch přes sloupec code, kterou si nazvu payrolls. Spojením těchto dvou tabulek získám především data o názvu a kódu odvětví a jejich mezd za dané období. Zároveň si funkcí WHERE vyfiltruji sloupec value_type_code s hodnotou 5958.
+Klauzulí SELECT vyberu sloupce category_name, price_value, industry_name, payroll_year a year.
+Tabulky prices a payrolls vytvořené pod příkazem WITH spojím pomocí funkce JOIN do jedné společné tabulky přes sloupec year.
 
-Prisel jsem na toto:
+### Vytvoření tabulky s dodatečnými daty o dalších evropských státech:
+Pomocí příkazu JOIN si spojím tabulky economies a countries přes sloupec country.
+Klauzulí SELECT vyberu sloupce country, continent, gdp, gini, population a year.
+Funkcí WHERE si vyfiltruju pouze země v Evropě a data pro období od roku 2006 až 2018.
 
-### Otazka 1
+### SQL dotaz na první otázku:
 
-Data potvrzuji ...
+### SQL dotaz na druhou otázku:
 
-### Otazka 2
+### SQL dotaz na třetí otázku:
 
-Data rikaji ...
+### SQL dotaz na čtvrtou otázku:
 
-### Otazka 3
+### SQL dotaz na pátou otázku:
 
-Data vysvetluji ...
+## Výsledky:
+
+### 1) Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
+
+### 2) Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
+
+### 3) Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
+
+### 4) Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
+
+### 5) Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
