@@ -1,10 +1,17 @@
 # Project from SQL
-
+---
 A project from the ENGETO Data Academy to obtain a certificate.
 Discord name: JakubInIT.
-
+---
+## Project structure:
+### Assignment
+### Attachments
+### Process
+### SQL Queries
+### Results
+---
 ## Assignment:
-###Introduction to the project:
+### Introduction to the project:
 In your analytical department of an independent company focused on citizens' living standards, you have agreed to attempt to answer several defined research questions addressing the accessibility of basic foodstuffs to the general public. Your colleagues have already defined the core questions they will attempt to answer and provide this information to the press department. This department will present the results at an upcoming conference dedicated to this field.
 They need you to prepare robust data resources where the comparison of food availability based on average incomes over a certain period can be observed.
 As an additional material, prepare a table with GDP, the GINI coefficient, and the population of other European countries within the same period as the primary overview for the Czech Republic.
@@ -40,15 +47,15 @@ Additionally, prepare a set of SQL queries to extract data from your tables to a
 Create a public repository on your GitHub account where you store all project-related information—primarily the SQL script generating the final table, a description of intermediate results (a cover document), and information about output data (e.g., where values are missing, etc.).
 Do not modify data in the primary tables! If transformation is needed, do so in newly created tables or views.
 
-## Project structure:
--Table of food prices and wages by sector - t_jakub_taclik_project_SQL_primary_final
+## Attachments:
+- Table of food prices and wages by sector - t_jakub_taclik_project_SQL_primary_final
 - Table with additional data on European countries - t_jakub_taclik_project_SQL_secondary_final
 - SQL query for the first question - SQL_first_task
 - SQL query for the second question - SQL_second_task
 - SQL query for the third question - SQL_third_task
 - SQL query for the fourth question - SQL_fourth_task
 - SQL query for the fifth question - SQL_fifth_task
-
+---
 ## Process:
 ### Creating a table of food prices and wages by sector:
 First, I used LEFT JOIN to merge the table czechia_price via the column category_code with the table czechia_price_category via the column code, naming this merged table prices. By joining these two tables, I obtained mainly data about the food name, its code, and its prices over the given period.
@@ -59,7 +66,7 @@ Using SELECT, I extracted the columns category_name, price_value, industry_name,
 I merged the economies and countries tables via the country column using JOIN.
 Using SELECT, I extracted the columns country, continent, gdp, gini, population, and year.
 With WHERE, I filtered only European countries and data for the period 2006-2018.
-
+---
 ## SQL Queries:
 ### 1st Question:
 I determined the average wage for each period and used LAG to get the previous year’s average wage.
@@ -68,7 +75,7 @@ Using CASE, I displayed "Payroll growth" when wages increased and "Payroll drop"
 
 ### 2nd Question:
 I used MIN and MAX to find the first and last year of measurements.
-With LIKE, I searched for data containing "milk" and "bread" and found their average prices in the first and last years.
+With LIKE, I searched for data containing "mléko" and "chléb" and found their average prices in the first and last years.
 Finally, I divided the average wage by the average price of milk and bread.
 
 ### 3rd Question:
@@ -81,7 +88,7 @@ I applied the percentage change formula to both wages and food prices, subtracte
 ### 5th Question:
 I calculated the average GDP, food prices, and wages for the current and previous years.
 Subtracting the previous year’s values from the current year’s, I checked whether they were positive or negative and used CASE to indicate growth or decline.
-
+---
 ## Results:
 ### 1) Do wages increase across all sectors?
 The data shows that wages in the sectors of Doprava a skladování, Ostatní činnosti, Zdravotní a sociální péče and Zpracovatelský průmysl increased year-on-year.
