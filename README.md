@@ -1,15 +1,15 @@
 # Project from SQL
----
+
 A project from the ENGETO Data Academy to obtain a certificate.
 Discord name: JakubInIT.
----
+
 ## Project structure:
-### Assignment
-### Attachments
-### Process
-### SQL Queries
-### Results
----
+- Assignment
+- Attachments
+- Process
+- SQL Queries
+- Results
+
 ## Assignment:
 ### Introduction to the project:
 In your analytical department of an independent company focused on citizens' living standards, you have agreed to attempt to answer several defined research questions addressing the accessibility of basic foodstuffs to the general public. Your colleagues have already defined the core questions they will attempt to answer and provide this information to the press department. This department will present the results at an upcoming conference dedicated to this field.
@@ -55,7 +55,7 @@ Do not modify data in the primary tables! If transformation is needed, do so in 
 - SQL query for the third question - SQL_third_task
 - SQL query for the fourth question - SQL_fourth_task
 - SQL query for the fifth question - SQL_fifth_task
----
+
 ## Process:
 ### Creating a table of food prices and wages by sector:
 First, I used LEFT JOIN to merge the table czechia_price via the column category_code with the table czechia_price_category via the column code, naming this merged table prices. By joining these two tables, I obtained mainly data about the food name, its code, and its prices over the given period.
@@ -66,7 +66,7 @@ Using SELECT, I extracted the columns category_name, price_value, industry_name,
 I merged the economies and countries tables via the country column using JOIN.
 Using SELECT, I extracted the columns country, continent, gdp, gini, population, and year.
 With WHERE, I filtered only European countries and data for the period 2006-2018.
----
+
 ## SQL Queries:
 ### 1st Question:
 I determined the average wage for each period and used LAG to get the previous year’s average wage.
@@ -88,7 +88,7 @@ I applied the percentage change formula to both wages and food prices, subtracte
 ### 5th Question:
 I calculated the average GDP, food prices, and wages for the current and previous years.
 Subtracting the previous year’s values from the current year’s, I checked whether they were positive or negative and used CASE to indicate growth or decline.
----
+
 ## Results:
 ### 1) Do wages increase across all sectors?
 The data shows that wages in the sectors of Doprava a skladování, Ostatní činnosti, Zdravotní a sociální péče and Zpracovatelský průmysl increased year-on-year.
