@@ -1,6 +1,7 @@
 # Project from SQL
 
 A project from the ENGETO Data Academy to obtain a certificate.
+
 Discord name: JakubInIT.
 
 ## Project structure:
