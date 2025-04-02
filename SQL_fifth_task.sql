@@ -36,7 +36,9 @@ SELECT gdp.year,
       	ELSE 'Price drop'
       END AS annual_price_progress
 FROM gdp_growth gdp
-LEFT JOIN payroll_growth pay ON gdp.year = pay.year
-LEFT JOIN price_growth pri ON gdp.year = pri.YEAR
+LEFT JOIN payroll_growth pay 
+    ON gdp.year = pay.year
+LEFT JOIN price_growth pri 
+    ON gdp.year = pri.YEAR
 WHERE avg_gdp_in_actual_year IS NOT NULL
 ORDER BY gdp.year;
