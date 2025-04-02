@@ -9,7 +9,7 @@ WITH payroll_changes AS (
 ),
 industry_payroll AS (
     SELECT 
-		industry_name,
+	industry_name,
         CASE 
             WHEN SUM(CASE WHEN payroll_change < 0 THEN 1 ELSE 0 END) > 0 
             THEN 'Payroll drop'
