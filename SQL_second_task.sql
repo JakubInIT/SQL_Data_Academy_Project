@@ -17,8 +17,8 @@ payrolls AS (
 )
 SELECT
 	year,
-	round((average_payroll::NUMERIC),0) AS average_payroll_in_Kc,
-	round(((average_payroll / milk_price)::NUMERIC),0) AS amout_of_milk_in_liters,
-	round(((average_payroll / bread_price)::NUMERIC),0) AS amout_of_bread_in_kilograms
+	round((average_payroll::NUMERIC), 0) AS average_payroll_in_Kc,
+	round(((average_payroll / milk_price)::NUMERIC), 0) AS amout_of_milk_in_liters,
+	round(((average_payroll / bread_price)::NUMERIC), 0) AS amout_of_bread_in_kilograms
 FROM payrolls
 ORDER BY year;
