@@ -4,7 +4,7 @@ WITH gdp_growth AS (
         avg(gdp) AS avg_gdp_in_actual_year,
         LAG(avg(gdp)) OVER (ORDER BY year) AS avg_gdp_in_previous_year
     FROM t_jakub_taclik_project_SQL_secondary_final
-    GROUP BY YEAR    
+    GROUP BY year    
 ),
 payroll_growth AS (
     SELECT 
@@ -12,7 +12,7 @@ payroll_growth AS (
         avg(payroll_value) AS avg_payroll_in_actual_year,
         LAG(avg(payroll_value)) OVER (ORDER BY year) AS avg_payroll_in_previous_year
     FROM t_jakub_taclik_project_SQL_primary_final
-    GROUP BY YEAR  
+    GROUP BY year  
 ),
 price_growth AS (
     SELECT 
@@ -20,7 +20,7 @@ price_growth AS (
         avg(price_value) AS avg_price_in_actual_year,
         LAG(avg(price_value)) OVER (ORDER BY year) AS avg_price_in_previous_year
     FROM t_jakub_taclik_project_SQL_primary_final
-    GROUP BY YEAR 
+    GROUP BY year 
 )
 SELECT gdp.year,
       CASE
@@ -39,6 +39,6 @@ FROM gdp_growth gdp
 LEFT JOIN payroll_growth pay 
     ON gdp.year = pay.year
 LEFT JOIN price_growth pri 
-    ON gdp.year = pri.YEAR
+    ON gdp.year = pri.year
 WHERE avg_gdp_in_actual_year IS NOT NULL
 ORDER BY gdp.year;
