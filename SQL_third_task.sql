@@ -8,7 +8,7 @@ GROUP BY category_name, year
 )
 SELECT
 	category_name,
-	round((avg(percent_price_growth)::NUMERIC),2) AS average_annual_growth
+	round((avg(percent_price_growth)::NUMERIC), 2) AS average_annual_growth
 FROM price_growth
 WHERE category_name IS NOT NULL
 GROUP BY category_name
